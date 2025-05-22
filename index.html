@@ -1,65 +1,94 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página Web</title>
+  <title>Rapido Pero Sabroso</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    .catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .item {
+      background-color: #dbc2a5;
+      border: 3px dashed #76cff1;
+      border-radius: 15px;
+      width: 200px;
+      padding: 10px;
       text-align: center;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
     }
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 20px 0;
+
+    .item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
     }
-    main {
-      padding: 40px;
+
+    .item h3 {
+      margin: 10px 0 5px 0;
     }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #45a049;
+
+    .precio {
+      color: rgb(126, 179, 126);
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-    <h1>Mi sitio web</h1>
-    <!-- Menú de navegación -->
-    <nav>
-      <ul>
-        <li><a href="index.html">inicio</a></li>
-        <li><a href="quienessomos.html">Quienes somos</a></li>
-        <li><a href="contactanos.html">contactanos</a></li>
-      </ul>
-    </nav>
-  </header>
   <header>
-    <h1>Bienvenido a mi página</h1>
+    <h1>Rapido Pero Sabroso</h1>
   </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="quienessomos.html">Quiénes Somos</a>
+    <a href="contactanos.html">Contáctanos</a>
+  </nav>
 
   <main>
-    <p>Esta es una página web de ejemplo creada con HTML, CSS y JavaScript.</p>
-    <button onclick="mostrarMensaje()">Haz clic aquí</button>
-    <p id="mensaje"></p>
+    <h2>Bienvenido a la mejor comida rápida</h2>
+    <p>¡Mira nuestro super catálogo lleno de sabor i amor!</p>
+
+    <div class="catalogo">
+      <div class="item">
+        <img src="https://i0.wp.com/tuliorecomienda.com/wp-content/uploads/2025/04/vd958_Brazz-Cocina-Urbana.webp?w=800&ssl=1.jpg" alt="Hamburguesa">
+        <h3>Hamburguesa Stabil</h3>
+        <p>Jugosa carne angus, cubierta con queso philadelphia, cebolla caramelizada y doble tocineta crocante. Un toque extra de crunch con cebollita crispy y el sabor inigualable de nuestra salsa de la casa.</p>
+        <p class="precio">$15.000</p>
+      </div>
+      <div class="item">
+        <img src="https://i0.wp.com/soyproesa.com/wp-content/uploads/2022/04/recetas-de-papas-fritas.png?fit=1920%2C1281&ssl=1" alt="papas Francesas">
+        <h3>Papas Francesas</h3>
+        <p>Una cuidadosa selección de papas andinas, cortadas a mano en bastones gruesos para conservar su textura dorada por fuera y cremosa por dentro. Estas papas son doblemente cocinadas en aceite vegetal premium para lograr un crocante uniforme y un interior sedoso. Finalizadas con un delicado toque de aceite de trufa blanca italiana, sal marina del Himalaya y un espolvoreo generoso de parmesano envejecido por 24 meses, rallado al momento..</p>
+        <p class="precio">$10.000</p>
+      </div>
+      <div class="item">
+        <img src="https://www.belbrandsfoodservice.com/wp-content/uploads/2018/05/recipe-desktop-merkts-cheesy-hot-dawg.jpg" alt="Hot Dog">
+        <h3>Hot Dog Brutal</h3>
+        <p>Pan brioche suave y ligeramente tostado, que abraza un chorizo artesanal de res Angus ahumado lentamente. Coronado con cebollas caramelizadas al vino tinto, mostaza de miel Dijon importada y un toque de alioli de ajo rostizado.</p>
+        <p class="precio">$12.000</p>
+      </div>
+      <div class="item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Eataly_Las_Vegas_-_Feb_2019_-_Sarah_Stierch_12.jpg/960px-Eataly_Las_Vegas_-_Feb_2019_-_Sarah_Stierch_12.jpg" alt="Pizza">
+        <h3>Pizza Rebelde</h3>
+        <p>Masa madre fermentada 48 horas, estirada a mano y horneada en piedra para lograr un borde crujiente con corazón esponjoso. Sobre ella, una base de pomodoro italiano especiado, láminas finas de prosciutto curado, queso de cabra cremoso y perlas de mozzarella fresca. Finalizada con rúgula baby y una delicada reducción de balsámico envejecido. Una mezcla perfecta de salado, ácido y umami.</p>
+        <p class="precio">$18.000</p>
+      </div>
+      <div class="item">
+        <img src="https://images.ctfassets.net/p1wk6poseifr/1w31lBawIOkpmRjw5oRk7P/5e53a89da296fdabde2c1f2924556b1c/malteada-baileys-polet.jpg" alt="Malteada">
+        <h3>Malteada Dulzona</h3>
+        <p>Una mezcla cremosa de helado artesanal de vainilla bourbon y cacao belga 70%, fusionada con leche entera fresca y un toque de crema batida infusionada con tostadas de avellanas. Servida en copa escarchada con chocolate fundido y crocante de nuez caramelizada. Finalizada con virutas de chocolate oscuro y un remolino</p>
+        <p class="precio">$8.000</p>
+      </div>
+    </div>
   </main>
 
-  <script>
-    function mostrarMensaje() {
-      document.getElementById("mensaje").textContent = "¡Gracias por hacer clic!";
-    }
-  </script>
-
+  <footer>
+    Hecho con hambre.
+  </footer>
 </body>
 </html>
